@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY Lavalink.jar .
+RUN wget https://github.com/lavalink-devs/Lavalink/releases/download/4.0.8/Lavalink.jar
 COPY application.yml .
 RUN mkdir -p plugins
 COPY plugins/ plugins/
