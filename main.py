@@ -141,7 +141,7 @@ async def play(interaction: discord.Interaction, busqueda: str):
 
     vc: wavelink.Player = guild.voice_client  # type: ignore
     if not vc:
-        vc = await voice_channel.connect(cls=wavelink.Player, self_deaf=False)
+        vc = await voice_channel.connect(cls=wavelink.Player, self_deaf=False, timeout=60.0)
 
     vc.text_channel = interaction.channel  # type: ignore
 
