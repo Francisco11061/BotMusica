@@ -89,7 +89,7 @@ class BotMusica(commands.Bot):
         super().__init__(command_prefix="!", intents=intents)
 
     async def setup_hook(self):
-        node = wavelink.Node(uri="http://127.0.0.1:2333", password="youshallnotpass")
+        node = wavelink.Node(uri="https://lavalink.devamop.in", password="DevamOP")
         await wavelink.Pool.connect(nodes=[node], client=self)
         await self.tree.sync()
         print("Slash commands sincronizados.")
